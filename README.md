@@ -21,7 +21,7 @@ These are examples for the resulting jsonl lines (pretty printed):
 
 "cam" (noun and verb)
 
-```jsonl
+```text
 {'examples': [{'example': 'cam thuộc giống cam quít',
                 'translation': 'the orange belongs to the citrus genus',
                 'type': 'example'},
@@ -48,7 +48,7 @@ These are examples for the resulting jsonl lines (pretty printed):
 
 "chuột" (noun)
 
-```jsonl
+```text
  {'examples': [{'example': 'ướt như chuột lột',
                 'translation': 'drenched to the bone, like a drowned rat',
                 'type': 'example'},
