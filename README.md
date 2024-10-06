@@ -68,6 +68,11 @@ These are examples for the resulting jsonl lines (pretty printed):
 
 ## Notes about the raw data
 
+The dictionary files are zipped files, which contain a `*.dz` as the content of the dictionary.
+This file is actually just a gzipped file and can be treated as such.
+
+
+The following concerns the format of the extracted dictionary file.
 Special characters at the start of the line indicate the field for a dictionary entry. Namely:
 
 | Character | Description                                             |
