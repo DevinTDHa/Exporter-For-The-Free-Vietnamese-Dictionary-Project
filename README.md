@@ -3,6 +3,8 @@
 This repository contains scripts to convert the dictionary files from [The Free Vietnamese Dictionary Project](https://www.informatik.uni-leipzig.de/~duc/Dict/install.html).
 The script `convert.py` will convert the files to jsonl.
 
+I tried to structure the jsonl files in a way, that is similar to the files from the great [wiktextract](https://github.com/tatuylonen/wiktextract) project.
+
 Currently only Vietnamese-English and vice versa dictionaries are supported (and tested, might work for the others).
 
 ## Usage
@@ -12,6 +14,57 @@ Each zip file will contain a `*.dz` file. Extract this file to the [data/](data/
 2. Run the `convert.py` script. This will convert each `*.dz` file in the data folder.
 
 The resulting jsonl files will also be located in the data folder.
+
+## Example
+
+These are examples for the resulting jsonl lines (pretty printed):
+
+"cam" (noun and verb)
+
+```jsonl
+{'examples': [{'example': 'cam thuộc giống cam quít',
+                'translation': 'the orange belongs to the citrus genus',
+                'type': 'example'},
+               {'example': 'rượu cam',
+                'translation': 'orange-flavoured liqueur',
+                'type': 'example'},
+               {'example': 'trục cam',
+                'translation': 'a cam-shaft',
+                'type': 'example'}],
+  'pos': 'noun',
+  'senses': [{'glosses': ['Orange']}],
+  'synonyms': [{'word': 'quả cam'}, {'word': 'Cam'}],
+  'word': 'cam'},
+ {'examples': [{'example': 'không cam làm nô lệ',
+                'translation': 'not to resign oneself to servitude',
+                'type': 'example'},
+               {'example': 'có nhiều nhặn gì cho cam',
+                'translation': '',
+                'type': 'example'}],
+  'pos': 'verb',
+  'senses': [{'glosses': ['To content oneself with, to resign oneself to']}],
+  'word': 'cam'},
+```
+
+"chuột" (noun)
+
+```jsonl
+ {'examples': [{'example': 'ướt như chuột lột',
+                'translation': 'drenched to the bone, like a drowned rat',
+                'type': 'example'},
+               {'example': 'chuột chạy cùng sào',
+                'translation': '',
+                'type': 'idiom'},
+               {'example': 'cháy nhà ra mặt chuột',
+                'translation': '',
+                'type': 'idiom'},
+               {'example': 'chuột sa chĩnh gạo',
+                'translation': '',
+                'type': 'idiom'}],
+  'pos': 'noun',
+  'senses': [{'glosses': ['Rat, mouse']}],
+  'word': 'chuột'}
+```
 
 ## Notes about the raw data
 
